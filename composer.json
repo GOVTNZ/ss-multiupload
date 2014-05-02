@@ -1,0 +1,24 @@
+{
+	"name": "Department-Of-Internal-Affairs/ss-multiupload",
+	"description": "A simple frontend multi-upload field for SS 3.1.x",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe", "upload"],
+	"authors": [
+		{
+			"name": "Gene Dower",
+			"email": "info@webstudios.co.nz",
+			"homepage": "http://www.webstudios.co.nz/",
+			"role": "Developer"
+		}
+	],
+    "support": {
+        "issues": "https://github.com/senorgeno/ss-multiupload/issues"
+    },
+	"require":
+	{
+		"silverstripe/framework": ">=3.1.x-dev"
+	},
+    "extra": {
+        "installer-name": "ss-multiupload"
+    }
+}
