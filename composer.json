@@ -16,7 +16,7 @@
     },
 	"require":
 	{
-		"silverstripe/framework": ">=3.1.x-dev"
+		"silverstripe/framework": ">=3.1.x"
 	},
     "extra": {
         "installer-name": "ss-multiupload"
