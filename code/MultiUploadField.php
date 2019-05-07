@@ -107,25 +107,26 @@ class MultiUploadField extends UploadField {
 	}
 	
 	public function setAllowedMaxUpload($allowedMaxUpload) {
-		$number=substr($allowedMaxUpload,0,-2);
+		$number = (int) substr($allowedMaxUpload,0,-2);
+
 		switch(strtoupper(substr($allowedMaxUpload,-2))){
 			case "KB":
-				$maxUpload = $allowedMaxUpload*1024;
+				$maxUpload = $number*1024;
 				break;
 			case "MB":
-				$maxUpload = $allowedMaxUpload*pow(1024,2);
+				$maxUpload = $number*pow(1024,2);
 				break;
 			case "GB":
-				$maxUpload = $allowedMaxUpload*pow(1024,3);
+				$maxUpload = $number*pow(1024,3);
 				break;
 			case "TB":
-				$maxUpload = $allowedMaxUpload*pow(1024,4);
+				$maxUpload = $number*pow(1024,4);
 				break;
 			case "PB":
-				$maxUpload = $allowedMaxUpload*pow(1024,5);
+				$maxUpload = $number*pow(1024,5);
 				break;
 			default:
-				$maxUpload = $allowedMaxUpload;
+				$maxUpload = $number;
 		}
 		
 		return $this->setConfig('allowedMaxUpload', $maxUpload);
